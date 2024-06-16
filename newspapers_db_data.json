@@ -1,0 +1,374 @@
+[
+  {
+    "model": "newspaper.topic",
+    "pk": 1,
+    "fields": {
+      "name": "Art"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 2,
+    "fields": {
+      "name": "Business"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 3,
+    "fields": {
+      "name": "Crime"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 4,
+    "fields": {
+      "name": "Politics"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 5,
+    "fields": {
+      "name": "Trade"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 6,
+    "fields": {
+      "name": "Weather"
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 1,
+    "fields": {
+      "username": "john_doe",
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "john.doe@example.com",
+      "years_of_experience": 5
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 2,
+    "fields": {
+      "username": "jane_smith",
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "email": "jane.smith@example.com",
+      "years_of_experience": 8
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 3,
+    "fields": {
+      "username": "alex_wong",
+      "first_name": "Alex",
+      "last_name": "Wong",
+      "email": "alex.wong@example.com",
+      "years_of_experience": 7
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 4,
+    "fields": {
+      "username": "emily_jones",
+      "first_name": "Emily",
+      "last_name": "Jones",
+      "email": "emily.jones@example.com",
+      "years_of_experience": 6
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 5,
+    "fields": {
+      "username": "michael_smith",
+      "first_name": "Michael",
+      "last_name": "Smith",
+      "email": "michael.smith@example.com",
+      "years_of_experience": 9
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 6,
+    "fields": {
+      "username": "sarah_adams",
+      "first_name": "Sarah",
+      "last_name": "Adams",
+      "email": "sarah.adams@example.com",
+      "years_of_experience": 4
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 7,
+    "fields": {
+      "username": "david_brown",
+      "first_name": "David",
+      "last_name": "Brown",
+      "email": "david.brown@example.com",
+      "years_of_experience": 5
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 8,
+    "fields": {
+      "username": "olivia_wilson",
+      "first_name": "Olivia",
+      "last_name": "Wilson",
+      "email": "olivia.wilson@example.com",
+      "years_of_experience": 3
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 9,
+    "fields": {
+      "username": "james_miller",
+      "first_name": "James",
+      "last_name": "Miller",
+      "email": "james.miller@example.com",
+      "years_of_experience": 6
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 10,
+    "fields": {
+      "username": "emma_martin",
+      "first_name": "Emma",
+      "last_name": "Martin",
+      "email": "emma.martin@example.com",
+      "years_of_experience": 7
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 1,
+    "fields": {
+      "title": "Art and Culture Weekly",
+      "content": "Explore the vibrant world of art and culture with our latest issue. From classical masterpieces to contemporary trends, we delve into what makes art timeless and inspiring.",
+      "published_date": "2024-06-14T12:00:00Z",
+      "topic": 1,
+      "publishers": [1, 2]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 2,
+    "fields": {
+      "title": "Business Insights Today",
+      "content": "Gain valuable insights into today's business landscape. Our expert analysis covers market trends, investment strategies, and exclusive interviews with industry leaders.",
+      "published_date": "2024-06-15T10:00:00Z",
+      "topic": 2,
+      "publishers": [2]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 3,
+    "fields": {
+      "title": "Crime Watch Chronicle",
+      "content": "Stay informed with the latest crime updates and investigative reports. We bring you in-depth coverage of criminal activities, law enforcement efforts, and community safety measures.",
+      "published_date": "2024-06-16T08:00:00Z",
+      "topic": 3,
+      "publishers": [1]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 4,
+    "fields": {
+      "title": "Political Debate Daily",
+      "content": "Join the debate on today's political issues. From policy analysis to opinion pieces, we provide a comprehensive view of national and international affairs.",
+      "published_date": "2024-06-17T15:00:00Z",
+      "topic": 4,
+      "publishers": [1, 2]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 5,
+    "fields": {
+      "title": "Trade Market Insights",
+      "content": "Navigate the complex world of global trade with our detailed market insights. Discover emerging trends, economic forecasts, and trade policies shaping the international marketplace.",
+      "published_date": "2024-06-18T11:00:00Z",
+      "topic": 5,
+      "publishers": [1]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 6,
+    "fields": {
+      "title": "Weather Report Weekly",
+      "content": "Plan your week with confidence using our accurate weather forecasts. From local conditions to global climate patterns, stay ahead with our expert meteorological analysis.",
+      "published_date": "2024-06-19T09:00:00Z",
+      "topic": 6,
+      "publishers": [2]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 7,
+    "fields": {
+      "title": "Art Gallery Review",
+      "content": "Step into the world of art galleries with our insightful reviews. From groundbreaking exhibitions to hidden gems, we uncover the beauty and innovation in contemporary art.",
+      "published_date": "2024-06-20T14:00:00Z",
+      "topic": 1,
+      "publishers": [3, 4]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 8,
+    "fields": {
+      "title": "Market Trends Analysis",
+      "content": "Unlock the secrets of market trends with our comprehensive analysis. Whether you're an investor or analyst, stay informed with our expert insights and predictions.",
+      "published_date": "2024-06-21T16:00:00Z",
+      "topic": 2,
+      "publishers": [3]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 9,
+    "fields": {
+      "title": "Crime Spree Alert",
+      "content": "Alerting you to the latest crime sprees and law enforcement responses. Stay vigilant and informed with our detailed reports on criminal activities affecting communities.",
+      "published_date": "2024-06-22T13:00:00Z",
+      "topic": 3,
+      "publishers": [4]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 10,
+    "fields": {
+      "title": "Political Opinions Column",
+      "content": "Dive into the diverse landscape of political opinions. From thought-provoking columns to in-depth analyses, explore the spectrum of viewpoints shaping today's political discourse.",
+      "published_date": "2024-06-23T17:00:00Z",
+      "topic": 4,
+      "publishers": [3, 4]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 11,
+    "fields": {
+      "title": "Global Trade Review",
+      "content": "Gain insights into global trade dynamics with our comprehensive reviews. From market trends to economic impacts, stay informed with our expert analysis.",
+      "published_date": "2024-06-24T10:00:00Z",
+      "topic": 5,
+      "publishers": [3]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 12,
+    "fields": {
+      "title": "Weather Forecast Update",
+      "content": "Stay ahead of the weather with our latest forecasts and climate updates. Whether rain or shine, our expert predictions keep you prepared for any conditions.",
+      "published_date": "2024-06-25T11:00:00Z",
+      "topic": 6,
+      "publishers": [4]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 13,
+    "fields": {
+      "title": "Art Exhibition Highlights",
+      "content": "Discover the best of art exhibitions worldwide. From iconic artworks to emerging talents, our highlights showcase the creativity and innovation in today's art scene.",
+      "published_date": "2024-06-26T12:00:00Z",
+      "topic": 1,
+      "publishers": [5, 6]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 14,
+    "fields": {
+      "title": "Business Leaders Interview",
+      "content": "Gain insights from the leaders shaping today's business landscape. Our exclusive interviews delve into their strategies, challenges, and visions for the future.",
+      "published_date": "2024-06-27T14:00:00Z",
+      "topic": 2,
+      "publishers": [5]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 15,
+    "fields": {
+      "title": "Crime Investigation Report",
+      "content": "Uncover the truth behind major crime investigations. From forensic breakthroughs to legal proceedings, our reports provide a detailed look at criminal cases.",
+      "published_date": "2024-06-28T16:00:00Z",
+      "topic": 3,
+      "publishers": [6]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 16,
+    "fields": {
+      "title": "Political Analysis Special",
+      "content": "Explore in-depth political analysis and commentary. From elections to policy debates, our special features provide nuanced perspectives on global political developments.",
+      "published_date": "2024-06-29T13:00:00Z",
+      "topic": 4,
+      "publishers": [5, 6]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 17,
+    "fields": {
+      "title": "Trade Market Report",
+      "content": "Stay updated with the latest trade market reports. From stock market trends to global economic forecasts, our reports offer essential insights for investors and analysts alike.",
+      "published_date": "2024-06-30T11:00:00Z",
+      "topic": 5,
+      "publishers": [5]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 18,
+    "fields": {
+      "title": "Weather Advisory",
+      "content": "Prepare for changing weather conditions with our timely advisories. From severe weather alerts to seasonal forecasts, stay informed and safe with our expert guidance.",
+      "published_date": "2024-07-01T09:00:00Z",
+      "topic": 6,
+      "publishers": [6]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 19,
+    "fields": {
+      "title": "Art Review Roundup",
+      "content": "Discover the latest art reviews from around the globe. Our roundup features diverse perspectives on exhibitions, artists, and art movements, offering a comprehensive view of the contemporary art world.",
+      "published_date": "2024-07-02T12:00:00Z",
+      "topic": 1,
+      "publishers": [7, 8]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 20,
+    "fields": {
+      "title": "Business Trends Analysis",
+      "content": "Explore the latest business trends shaping industries worldwide. From technological innovations to market disruptions, our analysis keeps you ahead of the curve.",
+      "published_date": "2024-07-03T10:00:00Z",
+      "topic": 2,
+      "publishers": [7]
+    }
+  }
+]
