@@ -1,3 +1,5 @@
 /newspaper/migrations/0001_initial.py
 /db.sqlite3
 .idea/
+/templates/taxi/
+/structure.png
