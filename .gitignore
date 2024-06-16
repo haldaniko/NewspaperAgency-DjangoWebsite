@@ -4,5 +4,6 @@ structure.png
 .idea/
 templates/taxi/
 __pycache__/
-templates_new/
 *.py[cod]
+templates_donor
+donor/
