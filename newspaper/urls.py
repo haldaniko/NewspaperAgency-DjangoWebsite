@@ -1,7 +1,8 @@
 from django.urls import path, include
 from newspaper.views import (index,
                              TopicListView, TopicCreateView, TopicUpdateView, TopicDeleteView,
-                             RedactorListView, RedactorCreateView, RedactorUpdateView, RedactorDeleteView)
+                             RedactorListView, RedactorCreateView, RedactorUpdateView, RedactorDeleteView,
+                             NewspaperListView, NewspaperCreateView, NewspaperUpdateView, NewspaperDeleteView)
 
 app_name = "newspaper"
 
@@ -22,4 +23,11 @@ urlpatterns = [
     path("redactors/<int:pk>/update/", RedactorUpdateView.as_view(), name="redactor-update"),
     path("redactors/<int:pk>/delete/", RedactorDeleteView.as_view(), name="redactor-delete"),
     # endregion ---------- Redactor Views  ----------
+
+    # region ---------- Newspaper Views  ----------
+    path("newspapers/", NewspaperListView.as_view(), name="newspaper-list"),
+    path("newspapers/create/", NewspaperCreateView.as_view(), name="newspaper-create"),
+    path("newspapers/<int:pk>/update/", NewspaperUpdateView.as_view(), name="newspaper-update"),
+    path("newspapers/<int:pk>/delete/", NewspaperDeleteView.as_view(), name="newspaper-delete"),
+    # endregion ---------- Newspaper Views  ----------
 ]

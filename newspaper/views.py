@@ -81,3 +81,34 @@ class RedactorDeleteView(LoginRequiredMixin, generic.DeleteView):
 
 
 # endregion ---------- Redactor Views  ----------
+
+
+# region ---------- Newspaper Views  ----------
+class NewspaperListView(LoginRequiredMixin, generic.ListView):
+    model = Newspaper
+    context_object_name = "newspaper_list"
+    template_name = "newspaper/newspaper/newspaper_list.html"
+    paginate_by = 5
+
+
+class NewspaperCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Newspaper
+    fields = "__all__"
+    success_url = reverse_lazy("newspaper:newspaper-list")
+    template_name = "newspaper/newspaper/newspaper_form.html"
+
+
+class NewspaperUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Newspaper
+    fields = "__all__"
+    success_url = reverse_lazy("newspaper:newspaper-list")
+    template_name = "newspaper/newspaper/newspaper_form.html"
+
+
+class NewspaperDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Newspaper
+    success_url = reverse_lazy("newspaper:newspaper-list")
+    template_name = "newspaper/newspaper/newspaper_confirm_delete.html"
+
+
+# endregion ---------- Newspaper Views  ----------
