@@ -1,0 +1,1 @@
+A system to track redactors assigned to newspapers, ensuring clear visibility of publishers for each edition.
