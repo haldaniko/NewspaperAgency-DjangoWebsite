@@ -1,5 +1,7 @@
-/newspaper/migrations/0001_initial.py
-/db.sqlite3
+newspaper/migrations/0001_initial.py
+db.sqlite3
+structure.png
 .idea/
-/templates/taxi/
-/structure.png
+templates/taxi/
+__pycache__/
+*.py[cod]
