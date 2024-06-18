@@ -61,7 +61,7 @@
 
 <link type="text/css" href="{% static 'assets/vendor/notyf/notyf.min.css' %}" rel="stylesheet">
 <link type="text/css" href="{% static 'assets/css/volt.css' %}" rel="stylesheet">
-
+<link type="text/css" href="{% static 'assets/css/volt.css' %}" rel="stylesheet">
 
 <!-- Specific Page JS goes HERE  -->    
 {% block stylesheets %}{% endblock stylesheets %}
@@ -73,11 +73,7 @@
     
     <main class="content">
 
-      {% include 'includes/navigation.html' %}
-
       {% block content %}{% endblock content %} 
-
-      {% include 'includes/settings-box.html' %}
 
       {% include 'includes/footer.html' %}
 
