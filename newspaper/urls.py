@@ -7,7 +7,8 @@ from newspaper.views import (index,
 app_name = "newspaper"
 
 urlpatterns = [
-    path("", index, name="index"),
+    path('index/', index, name='index'),
+    path('', index, name='index'),
 
     # region ---------- Topic Views  ----------
     path("topics/", TopicListView.as_view(), name="topic-list"),
