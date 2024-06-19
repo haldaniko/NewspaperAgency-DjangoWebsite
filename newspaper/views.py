@@ -36,6 +36,10 @@ class TopicCreateView(LoginRequiredMixin, generic.CreateView):
     template_name = "newspaper/topic/topic_form.html"
 
 
+class TopicDetailView(LoginRequiredMixin, generic.DetailView):
+    model = Topic
+
+
 class TopicUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Topic
     fields = "__all__"
@@ -65,6 +69,10 @@ class RedactorCreateView(LoginRequiredMixin, generic.CreateView):
     fields = "__all__"
     success_url = reverse_lazy("newspaper:redactor-list")
     template_name = "newspaper/redactor/redactor_form.html"
+
+
+class RedactorDetailView(LoginRequiredMixin, generic.DetailView):
+    model = Redactor
 
 
 class RedactorUpdateView(LoginRequiredMixin, generic.UpdateView):
@@ -97,6 +105,9 @@ class NewspaperCreateView(LoginRequiredMixin, generic.CreateView):
     success_url = reverse_lazy("newspaper:newspaper-list")
     template_name = "newspaper/newspaper/newspaper_form.html"
 
+
+class NewspaperDetailView(LoginRequiredMixin, generic.CreateView):
+    model = Newspaper
 
 class NewspaperUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Newspaper
