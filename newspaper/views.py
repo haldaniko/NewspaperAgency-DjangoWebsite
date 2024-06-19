@@ -108,7 +108,7 @@ class NewspaperCreateView(LoginRequiredMixin, generic.CreateView):
     template_name = "newspaper/newspaper/newspaper_form.html"
 
 
-class NewspaperDetailView(LoginRequiredMixin, generic.CreateView):
+class NewspaperDetailView(LoginRequiredMixin, generic.DetailView):
     model = Newspaper
     template_name = "newspaper/newspaper/newspaper_detail.html"
 
