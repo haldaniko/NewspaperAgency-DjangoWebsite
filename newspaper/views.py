@@ -38,6 +38,7 @@ class TopicCreateView(LoginRequiredMixin, generic.CreateView):
 
 class TopicDetailView(LoginRequiredMixin, generic.DetailView):
     model = Topic
+    template_name = "newspaper/topic/topic_detail.html"
 
 
 class TopicUpdateView(LoginRequiredMixin, generic.UpdateView):
@@ -73,6 +74,7 @@ class RedactorCreateView(LoginRequiredMixin, generic.CreateView):
 
 class RedactorDetailView(LoginRequiredMixin, generic.DetailView):
     model = Redactor
+    template_name = "newspaper/redactor/redactor_detail.html"
 
 
 class RedactorUpdateView(LoginRequiredMixin, generic.UpdateView):
@@ -108,6 +110,8 @@ class NewspaperCreateView(LoginRequiredMixin, generic.CreateView):
 
 class NewspaperDetailView(LoginRequiredMixin, generic.CreateView):
     model = Newspaper
+    template_name = "newspaper/newspaper/newspaper_detail.html"
+
 
 class NewspaperUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Newspaper
