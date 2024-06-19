@@ -47,15 +47,15 @@
     </div>
     <ul class="nav flex-column pt-3 pt-md-0">
       <li class="nav-item">
-        <a href="/" class="nav-link d-flex align-items-center">
+        <a href="{% url 'newspaper:index' %}" class="nav-link d-flex align-items-center">
                   <span class="sidebar-icon">
                     <img src="{% static 'assets/img/brand/light.svg' %}" height="20" width="20" alt="Volt Logo">
                   </span>
           <span class="mt-1 ms-1 sidebar-text">Agency Overview</span>
         </a>
       </li>
-      <li class="nav-item {% if 'dashboard' in segment %} active {% endif %}">
-        <a href="#" class="nav-link">
+      <li class="nav-item">
+        <a href="{% url 'newspaper:topic-list' %}" class="nav-link">
                   <span class="sidebar-icon">
                     <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 15 15"
                          xmlns="http://www.w3.org/2000/svg"><path
@@ -65,8 +65,8 @@
           <span class="sidebar-text">Topics</span>
         </a>
       </li>
-      <li class="nav-item {% if 'transactions' in segment %} active {% endif %}">
-        <a href="#" class="nav-link">
+      <li class="nav-item">
+        <a href="{% url 'newspaper:newspaper-list' %}" class="nav-link">
                   <span class="sidebar-icon">
                     <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 15 15"
                          xmlns="http://www.w3.org/2000/svg"><path
@@ -77,8 +77,8 @@
           <span class="sidebar-text">Newspapers</span>
         </a>
       </li>
-      <li class="nav-item {% if 'settings' in segment %} active {% endif %}">
-        <a href="#" class="nav-link">
+      <li class="nav-item">
+        <a href="{% url 'newspaper:redactor-list' %}" class="nav-link">
                   <span class="sidebar-icon">
                     <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 15 15"
                          xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd"
