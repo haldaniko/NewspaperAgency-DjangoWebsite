@@ -4,7 +4,7 @@ from newspaper.views import (index,
                              RedactorListView, RedactorCreateView, RedactorUpdateView, RedactorDeleteView,
                              RedactorDetailView,
                              NewspaperListView, NewspaperCreateView, NewspaperUpdateView, NewspaperDeleteView,
-                             TopicDetailView, NewspaperDetailView, )
+                             NewspaperDetailView, )
 
 app_name = "newspaper"
 
