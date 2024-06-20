@@ -56,7 +56,7 @@
               </td>
               <td>
                 {% for publisher in newspaper.publishers.all %}
-                  <a href="{% url 'newspaper:redactor-detail' pk=publisher.id %}">{{ publisher.username }}{% if not forloop.last %}, {% endif %}
+                  <a href="{% url 'newspaper:redactor-detail' pk=publisher.id %}">{{ publisher.username }}{% if not forloop.last %}, {% endif %}></a>
                 {% endfor %}
               </td>
             </tr>
