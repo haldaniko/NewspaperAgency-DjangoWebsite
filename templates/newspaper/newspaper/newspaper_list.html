@@ -40,23 +40,23 @@
           {% for newspaper in newspaper_list %}
             <tr>
               <td>
-                {{ newspaper.id }}
+                <a href="{% url 'newspaper:newspaper-detail' pk=newspaper.id %}">{{ newspaper.id }}</a>
               </td>
               <td>
-                {{ newspaper.title }}
+                <a href="{% url 'newspaper:newspaper-detail' pk=newspaper.id %}">{{ newspaper.title }}</a>
               </td>
               <td>
-                {{ newspaper.content|truncate_words }}
+                <a href="{% url 'newspaper:newspaper-detail' pk=newspaper.id %}">{{ newspaper.content|truncate_words }}</a>
               </td>
               <td>
-                {{ newspaper.published_date }}
+                <a href="{% url 'newspaper:newspaper-detail' pk=newspaper.id %}">{{ newspaper.published_date }}</a>
               </td>
               <td>
-                {{ newspaper.topic }}
+                <a href="{% url 'newspaper:topic-detail' pk=newspaper.topic.id %}">{{ newspaper.topic }}</a>
               </td>
               <td>
                 {% for publisher in newspaper.publishers.all %}
-                  {{ publisher.username }}{% if not forloop.last %}, {% endif %}
+                  <a href="{% url 'newspaper:redactor-detail' pk=publisher.id %}">{{ publisher.username }}{% if not forloop.last %}, {% endif %}
                 {% endfor %}
               </td>
             </tr>

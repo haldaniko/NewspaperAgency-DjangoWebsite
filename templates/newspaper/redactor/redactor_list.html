@@ -3,7 +3,7 @@
 
 {% block title %} Tables {% endblock %}
 
-<!-- Specific Page CSS goes HERE  -->
+
 {% block stylesheets %}{% endblock stylesheets %}
 
 {% block content %}
@@ -37,23 +37,23 @@
           <tbody>
           {% for redactor in redactor_list %}
             <tr>
-              <td>{{ redactor.id }}
+              <td>
+                <a href="{% url 'newspaper:redactor-detail' pk=redactor.id %}">{{ redactor.id }}</a>
               </td>
               <td>
-                {{ redactor.username }}
+                <a href="{% url 'newspaper:redactor-detail' pk=redactor.id %}">{{ redactor.username }}</a>
               </td>
               <td>
-                {{ redactor.first_name }}
+                <a href="{% url 'newspaper:redactor-detail' pk=redactor.id %}">{{ redactor.first_name }}</a>
               </td>
               <td>
-                {{ redactor.last_name }}
+                <a href="{% url 'newspaper:redactor-detail' pk=redactor.id %}">{{ redactor.last_name }}</a>
               </td>
               <td>
-                {{ redactor.years_of_experience }}
+                <a href="{% url 'newspaper:redactor-detail' pk=redactor.id %}">{{ redactor.years_of_experience }}</a>
               </td>
             </tr>
           {% endfor %}
-          <!-- End of Item -->
 
           </tbody>
         </table>

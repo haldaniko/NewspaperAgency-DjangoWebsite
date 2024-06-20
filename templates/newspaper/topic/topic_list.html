@@ -1,54 +1,54 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %} Tables {% endblock %} 
+{% block title %} Tables {% endblock %}
 
 {% block stylesheets %}{% endblock stylesheets %}
 
 {% block content %}
 
   <div class="py-4">
-      <div class="d-flex justify-content-between w-100 flex-wrap">
-          <div class="mb-3 mb-lg-0">
-              <h1 class="h4">Topics list</h1>
-          </div>
-          <div>
-              <a href="#" class="btn btn-primary link-to-page">
-                  Create
-              </a>
-          </div>
+    <div class="d-flex justify-content-between w-100 flex-wrap">
+      <div class="mb-3 mb-lg-0">
+        <h1 class="h4">Topics list</h1>
       </div>
+      <div>
+        <a href="#" class="btn btn-primary link-to-page">
+          Create
+        </a>
+      </div>
+    </div>
   </div>
 
   <div class="card border-0 shadow mb-4">
-      <div class="card-body">
-          <div class="table-responsive">
-              <table class="table table-centered table-nowrap mb-0 rounded">
-                  <thead class="thead-light">
-                      <tr>
-                          <th class="border-0 rounded-start">ID</th>
-                          <th class="border-0">Name</th>
-                          <th class="border-0">Total newspapers</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      {% for topic in topic_list %}
-                      <tr>
-                          <td>
-                            <a href="#" class="text-primary fw-bold">{{ topic.id }}</a>
-                          </td>
-                          <td>
-                              {{ topic.name }}
-                          </td>
-                          <td>
-                              {{ topic.newspaper_set.count }}
-                          </td>
-                      </tr>
-                      {% endfor %}
-                  </tbody>
-              </table>
-          </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-centered table-nowrap mb-0 rounded">
+          <thead class="thead-light">
+          <tr>
+            <th class="border-0 rounded-start">ID</th>
+            <th class="border-0">Name</th>
+            <th class="border-0">Total newspapers</th>
+          </tr>
+          </thead>
+          <tbody>
+          {% for topic in topic_list %}
+            <tr>
+              <td>
+                <a href="{% url 'newspaper:topic-detail' pk=topic.id %}">{{ topic.id }}</a>
+              </td>
+              <td>
+                  <a href="{% url 'newspaper:topic-detail' pk=topic.id %}">{{ topic.name }}</a>
+              </td>
+              <td>
+                {{ topic.newspaper_set.count }}
+              </td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
       </div>
+    </div>
   </div>
 
 {% endblock content %}
