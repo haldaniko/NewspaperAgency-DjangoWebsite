@@ -52,7 +52,7 @@
                 <a href="{% url 'newspaper:newspaper-detail' pk=newspaper.id %}">{{ newspaper.published_date }}</a>
               </td>
               <td>
-                <a href="{% url 'newspaper:topic-detail' pk=newspaper.topic.id %}">{{ newspaper.topic }}</a>
+                {{ newspaper.topic }}
               </td>
               <td>
                 {% for publisher in newspaper.publishers.all %}
