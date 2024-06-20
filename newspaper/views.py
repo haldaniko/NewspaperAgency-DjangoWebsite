@@ -26,7 +26,7 @@ class TopicListView(LoginRequiredMixin, generic.ListView):
     context_object_name = "topic_list"
     template_name = "newspaper/topic/topic_list.html"
 
-    paginate_by = 5
+    paginate_by = 10
 
 
 class TopicCreateView(LoginRequiredMixin, generic.CreateView):
@@ -57,7 +57,7 @@ class RedactorListView(LoginRequiredMixin, generic.ListView):
     model = Redactor
     context_object_name = "redactor_list"
     template_name = "newspaper/redactor/redactor_list.html"
-    paginate_by = 5
+    paginate_by = 10
 
 
 class RedactorCreateView(LoginRequiredMixin, generic.CreateView):
@@ -93,7 +93,7 @@ class NewspaperListView(LoginRequiredMixin, generic.ListView):
     model = Newspaper
     context_object_name = "newspaper_list"
     template_name = "newspaper/newspaper/newspaper_list.html"
-    paginate_by = 5
+    paginate_by = 10
 
 
 class NewspaperCreateView(LoginRequiredMixin, generic.CreateView):
