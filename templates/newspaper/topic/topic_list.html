@@ -35,10 +35,10 @@
           {% for topic in topic_list %}
             <tr>
               <td>
-                <a href="{% url 'newspaper:topic-detail' pk=topic.id %}">{{ topic.id }}</a>
+                {{ topic.id }}
               </td>
               <td>
-                  <a href="{% url 'newspaper:topic-detail' pk=topic.id %}">{{ topic.name }}</a>
+                {{ topic.name }}
               </td>
               <td>
                 {{ topic.newspaper_set.count }}
