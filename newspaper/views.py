@@ -36,11 +36,6 @@ class TopicCreateView(LoginRequiredMixin, generic.CreateView):
     template_name = "newspaper/topic/topic_form.html"
 
 
-class TopicDetailView(LoginRequiredMixin, generic.DetailView):
-    model = Topic
-    template_name = "newspaper/topic/topic_detail.html"
-
-
 class TopicUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Topic
     fields = "__all__"
