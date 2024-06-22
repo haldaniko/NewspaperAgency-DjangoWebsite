@@ -20,7 +20,7 @@
     </div>
   </div>
 
-      {% include "includes/search_form.html" %}
+  {% include "includes/search_form.html" %}
 
 
   <div class="card border-0 shadow mb-4">
@@ -29,9 +29,12 @@
         <table class="table table-centered table-nowrap mb-0 rounded">
           <thead class="thead-light">
           <tr>
-            <th class="border-0 rounded-start">ID</th>
+            <th class="border-0">ID</th>
             <th class="border-0">Name</th>
             <th class="border-0">Total newspapers</th>
+            <th class="border-0">Update</th>
+            <th class="border-0">Delete</th>
+
           </tr>
           </thead>
           <tbody>
@@ -45,6 +48,12 @@
               </td>
               <td>
                 {{ topic.newspaper_set.count }}
+              </td>
+              <td>
+                <a href="{% url 'newspaper:topic-update' pk=topic.id %}">&#128221;</a>
+              </td>
+              <td>
+                <a href="{% url 'newspaper:topic-delete' pk=topic.id %}">&#10060;</a>
               </td>
             </tr>
           {% endfor %}
