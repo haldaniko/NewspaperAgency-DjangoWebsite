@@ -1,1 +1,10 @@
-newspaper_confirm_delete.html
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Delete newspaper '{{ newspaper.title }}'?</h1>
+  <form action="" method="post">
+    {% csrf_token %}
+
+    <input type="submit" value="Yes" class="btn btn-danger">
+  </form>
+{% endblock %}
