@@ -1,9 +1,11 @@
 from django import forms
 from django.contrib.auth import get_user_model
+from django.contrib.auth.forms import UserCreationForm
 
-from newspaper.models import Newspaper
+from newspaper.models import Newspaper, Redactor
 
 
+# region ---------- Create/Update forms  ----------
 class NewspaperForm(forms.ModelForm):
     publishers = forms.ModelMultipleChoiceField(
         queryset=get_user_model().objects.all(),
@@ -17,6 +19,19 @@ class NewspaperForm(forms.ModelForm):
     class Meta:
         model = Newspaper
         fields = "__all__"
+
+
+class RedactorForm(forms.ModelForm):
+    class Meta(UserCreationForm.Meta):
+        model = Redactor
+        fields = UserCreationForm.Meta.fields + (
+            "first_name",
+            "last_name",
+            "years_of_experience",
+        )
+
+
+# endregion ---------- Create/Update forms  ----------
 
 
 class NewspaperSearchForm(forms.Form):
