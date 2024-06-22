@@ -1,12 +1,78 @@
 {% extends "base.html" %}
 {% load static %}
+{% load custom_filters %}
+
 
 {% block title %} Topic {% endblock %}
 
 {% block stylesheets %}{% endblock stylesheets %}
 
 {% block content %}
+  <h1>
+    Username: {{ redactor.username }}
+    <a href="{% url 'newspaper:redactor-delete' pk=redactor.id %}" class="btn btn-danger link-to-page">
+      Delete
+    </a>
 
-    {{ redactor.username }}
+    <a href="{% url 'newspaper:redactor-update' pk=redactor.id %}" class="btn btn-secondary link-to-page">
+      Update
+    </a>
+  </h1>
 
+  <p><strong>First name:</strong> {{ redactor.first_name }}</p>
+  <p><strong>Last name:</strong> {{ redactor.last_name }}</p>
+  <p><strong>Years of expirience:</strong> {{ redactor.years_of_experience }}</p>
+  <p><strong>Is staff:</strong> {{ redactor.is_staff }}</p>
+
+  <div class="ml-3">
+    <h4>Newspapers</h4>
+
+
+    <div class="card border-0 shadow mb-4">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-centered table-nowrap mb-0 rounded">
+            <thead class="thead-light">
+            <tr>
+              <th class="border-0 rounded-start">ID</th>
+              <th class="border-0">Title</th>
+              <th class="border-0">Content</th>
+              <th class="border-0">Published Date</th>
+              <th class="border-0">Topic</th>
+              <th class="border-0">Publishers</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for newspaper in redactor.newspapers.all %}
+              <tr>
+                <td>
+                  <a href="{% url 'newspaper:newspaper-detail' pk=newspaper.id %}">{{ newspaper.id }}</a>
+                </td>
+                <td>
+                  <a href="{% url 'newspaper:newspaper-detail' pk=newspaper.id %}">{{ newspaper.title }}</a>
+                </td>
+                <td>
+                  <a href="{% url 'newspaper:newspaper-detail' pk=newspaper.id %}">{{ newspaper.content|truncate_words }}</a>
+                </td>
+                <td>
+                  <a href="{% url 'newspaper:newspaper-detail' pk=newspaper.id %}">{{ newspaper.published_date }}</a>
+                </td>
+                <td>
+                  {{ newspaper.topic }}
+                </td>
+                <td>
+                  {% for publisher in newspaper.publishers.all %}
+                    <a href="{% url 'newspaper:redactor-detail' pk=publisher.id %}">
+                      {{ publisher.username }}{% if not forloop.last %}, {% endif %}</a>
+                  {% endfor %}
+                </td>
+              </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
+
