@@ -5,7 +5,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "django-insecure-n)1nhu!c9sv3&_r!_!z=2ux7@k@5a$&a&02jl+tpco$1+re-f7")
 
-DEBUG = os.environ.get("DJANGO_DEBUG", "") != "False"
+# DEBUG = os.environ.get("DJANGO_DEBUG", "") != "False"
+DEBUG = False
 
 ALLOWED_HOSTS = ["127.0.0.1"]
 
@@ -16,7 +17,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "debug_toolbar",
     "crispy_forms",
     "crispy_bootstrap4",
     "newspaper",
@@ -24,7 +24,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
