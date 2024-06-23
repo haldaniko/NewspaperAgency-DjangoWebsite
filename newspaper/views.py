@@ -66,7 +66,7 @@ class TopicDeleteView(LoginRequiredMixin, generic.DeleteView):
 
 
 # region ---------- Redactor Views  ----------
-class RedactorListView(generic.ListView):
+class RedactorListView(LoginRequiredMixin, generic.ListView):
     model = Redactor
     context_object_name = "redactor_list"
     template_name = "newspaper/redactor/redactor_list.html"
