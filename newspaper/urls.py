@@ -1,10 +1,11 @@
 from django.urls import path, include
-from newspaper.views import (index,
-                             TopicListView, TopicCreateView, TopicUpdateView, TopicDeleteView,
-                             RedactorListView, RedactorCreateView, RedactorUpdateView, RedactorDeleteView,
-                             RedactorDetailView,
-                             NewspaperListView, NewspaperCreateView, NewspaperUpdateView, NewspaperDeleteView,
-                             NewspaperDetailView, )
+from newspaper.views import (
+    index,
+    TopicListView, TopicCreateView, TopicUpdateView, TopicDeleteView,
+    RedactorListView, RedactorCreateView, RedactorUpdateView, RedactorDeleteView, RedactorDetailView,
+    NewspaperListView, NewspaperCreateView, NewspaperUpdateView, NewspaperDeleteView, NewspaperDetailView
+)
+
 
 app_name = "newspaper"
 
