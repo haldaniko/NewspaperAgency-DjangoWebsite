@@ -1,0 +1,111 @@
+{% load static %}
+<nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-lg-none">
+  <a class="navbar-brand me-lg-5" href="/">
+    <img class="navbar-brand-dark" src="{% static 'assets/img/brand/light.svg' %}" alt="Volt logo"/> <img
+      class="navbar-brand-light" src=" {% static 'assets/img/brand/dark.svg' %}" alt="Volt logo"/>
+  </a>
+  <div class="d-flex align-items-center">
+    <button class="navbar-toggler d-lg-none collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+<nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
+  <div class="sidebar-inner px-4 pt-3">
+    <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
+      <div class="collapse-close d-md-none">
+        <a href="#sidebarMenu" data-bs-toggle="collapse"
+           data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
+           aria-label="Toggle navigation">
+          <svg class="icon icon-xs" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <ul class="nav flex-column pt-3 pt-md-0">
+      <li class="nav-item">
+        <a href="{% url 'newspaper:index' %}" class="nav-link d-flex align-items-center">
+                  <span class="sidebar-icon">
+                    <img src="{% static 'assets/img/brand/light.svg' %}" height="20" width="20" alt="Volt Logo">
+                  </span>
+          <span class="mt-1 ms-1 sidebar-text">Agency Overview</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="{% url 'newspaper:topic-list' %}" class="nav-link">
+                  <span class="sidebar-icon">
+                    <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 15 15"
+                         xmlns="http://www.w3.org/2000/svg"><path
+                        d="M 12.03125 2.023438 C 11.535156 2.023438 11.066406 2.269531 10.675781 2.65625 L 2.5625 10.726563 L 1.207031 14.785156 L 5.265625 13.433594 L 5.351563 13.351563 L 13.386719 5.367188 C 13.773438 4.976563 14.015625 4.507813 14.015625 4.011719 C 14.015625 3.515625 13.773438 3.046875 13.386719 2.65625 C 12.996094 2.269531 12.527344 2.023438 12.03125 2.023438 Z M 10.027344 4.710938 L 11.320313 6.007813 L 4.726563 12.5625 L 2.789063 13.207031 L 3.4375 11.265625 Z"
+                    ></path></svg>
+                  </span>
+          <span class="sidebar-text">Topics</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="{% url 'newspaper:newspaper-list' %}" class="nav-link">
+                  <span class="sidebar-icon">
+                    <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 15 15"
+                         xmlns="http://www.w3.org/2000/svg"><path
+                        fill-rule="evenodd"
+                        d="M 4.5 2 C 3.675781 2 3 2.675781 3 3.5 L 3 12.5 C 3 13.324219 3.675781 14 4.5 14 L 11.5 14 C 12.324219 14 13 13.324219 13 12.5 L 13 5.292969 L 9.707031 2 Z M 4.5 3 L 9 3 L 9 6 L 12 6 L 12 12.5 C 12 12.78125 11.78125 13 11.5 13 L 4.5 13 C 4.21875 13 4 12.78125 4 12.5 L 4 3.5 C 4 3.21875 4.21875 3 4.5 3 Z M 10 3.707031 L 11.292969 5 L 10 5 Z M 6 8 L 6 9 L 10 9 L 10 8 Z M 6 10 L 6 11 L 9 11 L 9 10 Z"
+                        clip-rule="evenodd"></path></svg>
+                  </span>
+          <span class="sidebar-text">Newspapers</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="{% url 'newspaper:redactor-list' %}" class="nav-link">
+                  <span class="sidebar-icon">
+                    <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 15 15"
+                         xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd"
+                                                                  d="M 8 2 C 6.347656 2 5 3.347656 5 5 C 5 6.652344 6.347656 8 8 8 C 9.652344 8 11 6.652344 11 5 C 11 3.347656 9.652344 2 8 2 Z M 8 8 C 5.246094 8 3 10.246094 3 13 L 4 13 C 4 10.785156 5.785156 9 8 9 C 10.214844 9 12 10.785156 12 13 L 13 13 C 13 10.246094 10.753906 8 8 8 Z M 8 3 C 9.109375 3 10 3.890625 10 5 C 10 6.109375 9.109375 7 8 7 C 6.890625 7 6 6.109375 6 5 C 6 3.890625 6.890625 3 8 3 Z"
+                                                                  clip-rule="evenodd"></path></svg>
+                  </span>
+          <span class="sidebar-text">Redactors</span>
+        </a>
+      </li>
+
+      <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
+
+
+      {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ user.get_absolute_url }}"> <span class="sidebar-icon">
+                    <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 15 15"
+                         xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd"
+                                                                  d="M 8 2 C 6.347656 2 5 3.347656 5 5 C 5 6.652344 6.347656 8 8 8 C 9.652344 8 11 6.652344 11 5 C 11 3.347656 9.652344 2 8 2 Z M 8 8 C 5.246094 8 3 10.246094 3 13 L 4 13 C 4 10.785156 5.785156 9 8 9 C 10.214844 9 12 10.785156 12 13 L 13 13 C 13 10.246094 10.753906 8 8 8 Z M 8 3 C 9.109375 3 10 3.890625 10 5 C 10 6.109375 9.109375 7 8 7 C 6.890625 7 6 6.109375 6 5 C 6 3.890625 6.890625 3 8 3 Z"
+                                                                  clip-rule="evenodd"></path></svg>
+                  </span>
+            <span class="sidebar-text">User: {{ user.get_username }}</span>
+          </a>
+
+        </li>
+        <li class="nav-item">
+          <form id="logout-form" method="post" action="{% url 'logout' %}" style="display: none;">
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ request.path }}">
+          </form>
+          <a href="#" class="nav-link"
+             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+        <span class="sidebar-icon">
+            <svg class="icon icon-xs text-danger me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+            </svg>
+        </span>
+            <span class="sidebar-text">Logout</span>
+          </a>
+        </li>
+
+      {% endif %}
+
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Newspaper {% endblock %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+  <h1>
+    {{ newspaper.title }}
+    <a href="{% url 'newspaper:newspaper-delete' pk=newspaper.id %}" class="btn btn-danger link-to-page">
+      Delete
+    </a>
+
+    <a href="{% url 'newspaper:newspaper-update' pk=newspaper.id %}" class="btn btn-secondary link-to-page">
+      Update
+    </a>
+  </h1>
+  <h4>Topic: {{ newspaper.topic.name }}</h4>
+  <h4>
+    Redactors:
+    {% for publisher in newspaper.publishers.all %}
+      <a href="{% url 'newspaper:redactor-detail' pk=publisher.id %}">{{ publisher.username }}
+        ({{ publisher.first_name }} {{ publisher.last_name }}){% if not forloop.last %}, {% endif %}</a>
+    {% endfor %}
+  </h4>
+  <hr>
+  <h4>Content:</h4>
+  <p class="lead">
+    {{ newspaper.content }}
+  </p>
+{% endblock %}

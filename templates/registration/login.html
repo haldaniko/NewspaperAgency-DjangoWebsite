@@ -1,0 +1,65 @@
+{% extends "base-fullscreen.html" %}
+{% load crispy_forms_filters %}
+{% load static %}
+
+{% block title %} Sign IN {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <main>
+    <section class="vh-lg-100 mt-5 mt-lg-0 bg-soft d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-center form-bg-image"
+             data-background-lg="{% static 'assets/img/illustrations/signin.svg' %}">
+          <div class="col-12 d-flex align-items-center justify-content-center">
+            <div class="bg-white shadow border-0 rounded border-light p-4 p-lg-5 w-100 fmxw-500">
+              <div class="text-center text-md-center mb-4 mt-md-0">
+                <h1 class="mb-0 h3">
+                  Sign IN
+                </h1>
+                <br/>
+              </div>
+              {% if form.errors %}
+                <p>Your username and password didn't match. Please try again.</p>
+              {% endif %}
+              <form method="post" action="" class="mt-4">
+
+                {% csrf_token %}
+
+                <!-- Form -->
+                <div class="form-group mb-4">
+                  <div class="">
+                    {{ form.username|as_crispy_field }}
+                  </div>
+                </div>
+                <!-- End of Form -->
+                <div class="form-group">
+                  <!-- Form -->
+                  <div class="mb-4">
+                    <div class="">
+                      {{ form.password|as_crispy_field }}
+                    </div>
+                  </div>
+                  <!-- End of Form -->
+                  <div class="d-flex justify-content-between align-items-top mb-4">
+                  </div>
+                </div>
+                <div class="d-grid">
+                  <button type="submit" name="login" class="btn btn-gray-800">Sign IN</button>
+                </div>
+              </form>
+              <br/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
