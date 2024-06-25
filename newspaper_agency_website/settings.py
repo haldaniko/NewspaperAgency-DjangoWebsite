@@ -8,7 +8,7 @@ SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 
 DEBUG = os.environ.get("DJANGO_DEBUG", "") != "False"
 
-ALLOWED_HOSTS = ["127.0.0.1", "https://newspaper-agency-xa7h.onrender.com"]
+ALLOWED_HOSTS = ["127.0.0.1", "newspaper-agency-xa7h.onrender.com"]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
