@@ -28,4 +28,5 @@ After loading data from fixture you can use following superuser (or create anoth
 * Powerful admin panel for advanced managing
 
 ## Demo
-![Website Interface](demo.png)
+![Website Interface](demo1.png)
+![Website Interface](demo2.png)
