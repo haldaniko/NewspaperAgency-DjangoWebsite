@@ -12,7 +12,9 @@ cd newspaper-agency-website
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-python manage.py makemigrations
+
+(create your .env file like .env.sample)
+
 python manage.py migrate
 python manage.py loaddata newspapers_db_data.json
 python manage.py runserver
