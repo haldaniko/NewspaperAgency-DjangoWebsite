@@ -2,7 +2,7 @@
 
 Django project for managing newspapers and redactors in nespaper agency.
 
-## Instalation
+## Installation
 
 ```
 git clone https://github.com/haldaniko/NewspaperAgency-DjangoWebsite.git
